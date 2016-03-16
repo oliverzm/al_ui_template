@@ -1,0 +1,13 @@
+<div>
+    <div class="row">
+        <movie-detail ng-model="view" />
+    </div>
+    <div class="row">
+        <div class="col-md-6" ng-if="view.details.credits.cast.length > 0">
+            <movie-cast ng-model="view.details.credits.cast" />
+        </div>
+        <div class="col-md-6" ng-if="view.details.credits.crew.length > 0">
+            <movie-crew ng-model="view.details.credits.crew" />
+        </div>
+    </div>
+</div>

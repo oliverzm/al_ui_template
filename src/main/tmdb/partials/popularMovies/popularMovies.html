@@ -1,0 +1,8 @@
+<div>
+    <h1 ng-if="movieList">Explore Popular Movies</h1>
+    <div ng-repeat="movie in movieList track by $index">
+        <a href="#/movie/{{ movie.id }}" title="{{ movie.title }}" ng-if="movie.poster_path">
+            <img style="float: left; margin: 10px;" src="{{view.images}}{{ movie.poster_path }}" width="150" height="225" title="{{ movie.title }}" />
+        </a>
+    </div>
+</div>

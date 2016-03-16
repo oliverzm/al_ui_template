@@ -1,0 +1,33 @@
+<div>
+    <div class="col-md-5">
+        <img src="{{view.images}}{{ detail.details.profile_path }}" />
+    </div>
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ detail.details.name }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="detail" ng-if="detail.details.place_of_birth">
+                    Birth {{ detail.details.birthday | date }} {{ detail.details.place_of_birth }}
+                </div>
+                <div class="detail" ng-if="detail.details.deathday">
+                    Death {{ detail.details.deathday | date }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span ng-if="detail.details.homepage"><a href="{{ detail.details.homepage }}" target=_new>{{ detail.details.homepage }}</a></span>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                {{ detail.details.biography }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div>
+    <h1>Similar Movies</h1>
+    <div ng-repeat="similar in similarMovies | limitTo: 15">
+        <div style="float: left; margin: 10px; width: 100px;">
+            <a href="#/movie/{{ similar.id }}" title="{{ similar.title }}">
+                <img src="{{view.images}}{{ similar.poster_path }}" width="65" height="97" title="{{ similar.title }}" />
+            </a>
+        </div>
+    </div>
+</div>

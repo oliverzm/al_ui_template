@@ -1,0 +1,12 @@
+<div>
+    <h1>Cast</h1>
+    <div ng-repeat="credit in castList">
+        <div style="float: left; margin: 10px; width: 100px; height: 150px;" ng-if="credit.poster_path">
+            <a href="#/movie/{{ credit.id }}" title="{{ credit.title }} as {{ credit.character }}">
+                <img src="{{view.images}}{{ credit.poster_path }}" title="{{ credit.title }} as {{ credit.character }}" width="65" height="97" ng-if="credit.poster_path" />
+            </a>
+            <br />
+            {{ credit.character }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+src/main/doc/**
+src/main/coverage/**
+src/main/mocks/**
+src/main/**/*.test.js
+src/main/vendor/**
+src/main/translations.js

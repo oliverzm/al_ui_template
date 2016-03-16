@@ -1,0 +1,19 @@
+<div>
+    <div class="input-group">
+        <input type="text" size="64" style="width: 500px;"  placeholder="Search for an Actor, Actress, or Movie" name="searchPhrase" id="searchPhrase" class="form-control pull-right" ng-model="view.searchPhrase" ng-change="search()" />
+    </div>
+    <div ng-if="view.resultlist.length > 0" class="pull-right" style="width: 557px; background-color: #ffffff; position: absolute; right: 15px; margin-top: -17px; z-index: 100; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; border-left: 1px solid #dddddd; border-right: 1px solid #dddddd;">
+        <div ng-repeat="match in view.resultlist">
+            <a ng-if="match.media_type === 'movie' && match.poster_path" href="#/movie/{{ match.id }}">
+                <div style="margin-bottom: 2px; margin-top: 2px;">
+                    <img ng-if="match.poster_path" src="{{view.images}}{{ match.poster_path }}" style="width: 25px; margin-right: 10px;" />{{ match.title }}
+                </div>
+            </a>
+            <a ng-if="match.media_type === 'person' && match.profile_path" href="#/person/{{ match.id }}">
+                <div style="margin-bottom: 2px; margin-top: 2px;">
+                    <img src="{{view.images}}{{ match.profile_path }}" style="width: 25px; margin-right: 10px;" />{{ match.name }}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
