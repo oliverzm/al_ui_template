@@ -1,0 +1,9 @@
+<div class="awesome-search-results">
+	<ul>
+		<li ng-repeat="result in resultList" class="col-md-3">
+			<img ng-src="{{view.images}}{{result.foto}}" title="{{result.title}} as {{result.character}}" width="65" height="97" ng-if="result.foto" />
+			<span class="badge">{{result.media_type}}</span>
+			<a href="">{{result.name || result.title}}</a>
+		</li>
+	</ul>
+</div>

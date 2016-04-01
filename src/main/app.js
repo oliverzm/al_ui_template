@@ -27,6 +27,7 @@ define([ 'angular',
          'tmdb/partials/movie/MovieController',
          'tmdb/partials/person/PersonController',
          'tmdb/partials/awesomeSearch/AwesomeSearchController',
+         'tmdb/partials/awesomeSearch/AwesomeSearchResultsController',
          'tmdb/partials/remoteImageLoader/RemoteImageLoader',
          'tmdb/directives/search',
          'tmdb/directives/popularMovies',
@@ -37,14 +38,15 @@ define([ 'angular',
          'tmdb/directives/similarMovies',
          'tmdb/directives/movieCast',
          'tmdb/directives/movieCrew',
-         'tmdb/directives/awesomeSearch'], 
+         'tmdb/directives/awesomeSearch',
+         'tmdb/directives/awesomeSearchResults'], 
     function( angular, config, $resource, $location, LocalStorageModule, 
               TMDBAPIService, SearchController, HomeController, MovieController, 
-              PersonController, AwesomeSearchController,
+              PersonController, AwesomeSearchController, AwesomeSearchResultsController,
               RemoteImageLoader, searchDirective, popularMoviesDirective, 
               personDetailDirective, personCrewDirective, personCastDirective,
               movieDetailDirective, similarMoviesDirective, movieCastDirective,
-              movieCrewDirective, awesomeSearchDirective ) {
+              movieCrewDirective, awesomeSearchDirective, awesomeSearchResultsDirective ) {
     	"use strict";
 
         /** @constructs app */
@@ -62,6 +64,9 @@ define([ 'angular',
 
         app.service( "TMDBAPIService", TMDBAPIService);
 
+
+        app.controller( "AwesomeSearchResultsController", AwesomeSearchResultsController );
+        app.directive( "awesomeSearchResults", awesomeSearchResultsDirective );
 
         app.controller( "AwesomeSearchController", AwesomeSearchController );
         app.directive( "awesomeSearch", awesomeSearchDirective );

@@ -23,7 +23,8 @@ define( [ 'angular',
 
         var AwesomeSearchController = function($scope, TMDBAPIService ) {
 
-            var api = TMDBAPIService.Search();
+            var apiSearch = TMDBAPIService.Search();
+            var apiPerson = TMDBAPIService.Person();
 
             $scope.searchPhrase = "";
 
@@ -31,8 +32,25 @@ define( [ 'angular',
                 if (event.which === 13) {
 
 
-                    api.search.multi($scope.searchPhrase).then(function(data){
-                        console.log(data);
+                    apiSearch.search.multi($scope.searchPhrase).then(function(response){
+                        $scope.searchResults = response.data.results;
+
+                        $scope.searchResults.forEach(function(item){
+                            if (item.media_type === "person") {
+                                // Get images for persons 
+                                apiPerson.person.person(item.id).then( function(r) {
+                                    item.foto = r.data.profile_path;
+                                    console.log(r.data.profile_path);
+                                });
+                            }
+                            else {
+                                item.foto = item.poster_path;
+                            }
+                        });
+
+                        
+
+
                     });
 
                 }
