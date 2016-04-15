@@ -53,7 +53,7 @@ define( [ 'angular',
                 if (event.which === 13) {
                     self.search();
                 }
-            }
+            };
 
             /**
             * Call the API with the search phrase
@@ -76,7 +76,7 @@ define( [ 'angular',
                     });
 
                 });
-            }
+            };
 
         };
 
