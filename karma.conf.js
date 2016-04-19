@@ -7,6 +7,7 @@ module.exports = function (config) {
         files: [
             'src/main/vendor/jquery/dist/jquery.min.js',
             'src/main/vendor/angular/angular.js',
+            'src/main/vendor/karma-read-json/karma-read-json.js',
             {pattern: 'src/main/mocks/data/**/*.json', included: false, watched: true, served: true },
             {pattern: 'src/main/**/*.js', included: false, served: true },
             {pattern: 'src/test/main-test.js', included: true },                                        /*  set up require framework and specify which tests to run */

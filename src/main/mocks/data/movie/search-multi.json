@@ -1,0 +1,398 @@
+[
+  {
+    "adult": false,
+    "backdrop_path": "/5XPPB44RQGfkBrbJxmtdndKz05n.jpg",
+    "genre_ids": [
+      28,
+      12,
+      14,
+      878
+    ],
+    "id": 19995,
+    "original_language": "en",
+    "original_title": "Avatar",
+    "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "release_date": "2009-12-10",
+    "poster_path": "/tcqb9NHdw9SWs2a88KCDD4V8sVR.jpg",
+    "popularity": 5.774698,
+    "title": "Avatar",
+    "video": false,
+    "vote_average": 7.1,
+    "vote_count": 7560,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      27
+    ],
+    "id": 282908,
+    "original_language": "ja",
+    "original_title": "Abataa",
+    "overview": "Michiko lost her dad in a car accident when she was 10 years old. After the car accident, Michiko has lived with her mother Kyoko. Michiko, now in her 2nd year of high school, gets a cell phone from her mother as a birthday present. Michiko is so excited to have her very first cell phone. Soon afterwards, she is forced into joining social networking site \"AvaQ\" by classmate, and queen of the classroom, Taeko.",
+    "release_date": "2011-04-30",
+    "poster_path": "/famiFiwZPQ3A8WVjKFhCplKrZgr.jpg",
+    "popularity": 1.00409,
+    "title": "Avatar",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      28,
+      12,
+      14
+    ],
+    "id": 76600,
+    "original_language": "en",
+    "original_title": "Avatar 2",
+    "overview": "A sequel to the 2009 blockbuster, the Avatar sequel will take place after the events of the first movie.",
+    "release_date": "2018-12-25",
+    "poster_path": "/28vT8vlqx4zwstq8UFP7OPvdKKz.jpg",
+    "popularity": 2.533366,
+    "title": "Avatar 2",
+    "video": false,
+    "vote_average": 7.3,
+    "vote_count": 41,
+    "media_type": "movie"
+  },
+  {
+    "backdrop_path": "/732azfQ0xUAJNQ48pPfVtCCLVlZ.jpg",
+    "first_air_date": "2005-02-21",
+    "genre_ids": [
+      28,
+      12,
+      16,
+      14
+    ],
+    "id": 246,
+    "original_language": "en",
+    "original_name": "Avatar: The Last Airbender",
+    "overview": "Avatar: The Last Airbender is an American animated television series that aired for three seasons on Nickelodeon from 2005 to 2008. The series was created and produced by Michael Dante DiMartino and Bryan Konietzko, who served as executive producers along with Aaron Ehasz. Avatar: The Last Airbender is set in an Asian-influenced world wherein some are able to manipulate the classical elements by use of psychokinetic variants of Chinese martial arts known as \"bending\". The show combined the styles of anime and American cartoons, and relied on the imagery of various East-Asian, Inuit, Indian and South-American societies. Due to this style, the series regularly enters the conversation regarding its consideration as an anime work.\n\nThe series follows the adventures of protagonist twelve-year-old Aang and his friends, who must bring peace and unity to the world by ending the Fire Lord's war against the other three nations. The pilot episode first aired on February 21, 2005 and the series concluded with a widely praised two-hour episode on July 19, 2008. The show is obtainable from various sources, including DVD, the iTunes Store, the Zune Marketplace, the Xbox Live Marketplace, the PlayStation Store, Netflix Instant Play, and the Nicktoons Network.",
+    "origin_country": [
+      "US"
+    ],
+    "poster_path": "/sB8V0pQtJZ17v8FLXMOcYz6045c.jpg",
+    "popularity": 2.018274,
+    "name": "Avatar: The Last Airbender",
+    "vote_average": 7.7,
+    "vote_count": 30,
+    "media_type": "tv"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      878,
+      28,
+      12,
+      14
+    ],
+    "id": 83533,
+    "original_language": "en",
+    "original_title": "Avatar 3",
+    "overview": null,
+    "release_date": "2020-12-25",
+    "poster_path": null,
+    "popularity": 1.2521,
+    "title": "Avatar 3",
+    "video": false,
+    "vote_average": 8,
+    "vote_count": 2,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      28,
+      12,
+      878,
+      14
+    ],
+    "id": 216527,
+    "original_language": "en",
+    "original_title": "Avatar 4",
+    "overview": "The third sequel in the highly acclaimed Avatar series.",
+    "release_date": "2022-12-25",
+    "poster_path": null,
+    "popularity": 1.184763,
+    "title": "Avatar 4",
+    "video": false,
+    "vote_average": 8,
+    "vote_count": 2,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/rkXYAvWjHATFWE4fSdL5ziIrLBe.jpg",
+    "genre_ids": [
+      99
+    ],
+    "id": 183392,
+    "original_language": "en",
+    "original_title": "Capturing Avatar",
+    "overview": "Capturing Avatar is a feature length behind-the-scenes documentary about the making of Avatar. It uses footage from the film's development, as well as stock footage from as far back as the production of Titanic in 1995. Also included are numerous interviews with cast, artists, and other crew members. The documentary was released as a bonus feature on the extended collector's edition of Avatar.",
+    "release_date": "2010-11-16",
+    "poster_path": "/pRVUVOBCHmTU4b8tfsiBGtXz7GX.jpg",
+    "popularity": 1.148593,
+    "title": "Capturing Avatar",
+    "video": true,
+    "vote_average": 7.4,
+    "vote_count": 5,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      28,
+      12,
+      14,
+      878
+    ],
+    "id": 393209,
+    "original_language": "en",
+    "original_title": "Avatar 5",
+    "overview": "The fourth sequel in the highly acclaimed Avatar series.",
+    "release_date": "2023-12-25",
+    "poster_path": null,
+    "popularity": 1.0762,
+    "title": "Avatar 5",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/75UGe8CGEmt91L2ooA0VagRIjI4.jpg",
+    "genre_ids": [],
+    "id": 278698,
+    "original_language": "en",
+    "original_title": "Avatar Spirits",
+    "overview": "A short documentary film, directed by Kurt Mattila, on the creation of Avatar: The Last Airbender. Starring Bryan Konietzko and Michael Dante DiMartino, co-creators of the hit television series.",
+    "release_date": "2010-06-22",
+    "poster_path": "/pehOW0qhttKtCghJ61frPoFq4D1.jpg",
+    "popularity": 1.001311,
+    "title": "Avatar Spirits",
+    "video": false,
+    "vote_average": 10,
+    "vote_count": 1,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      99
+    ],
+    "id": 348369,
+    "original_language": "en",
+    "original_title": "Avatar Days",
+    "overview": "Originally created for the Darklight Festival's '4 Day Movie' project, Avatar Days is a portrait of four online gamers in Dublin whose daily lives contrast with their virtual identities. Advanced 3D technologies and Motion Capture animation were used to insert the players' in-game characters in place of their real selves against the backdrop of the banal urban landscape which they inhabit.",
+    "release_date": "2010-02-02",
+    "poster_path": null,
+    "popularity": 1.001286,
+    "title": "Avatar Days",
+    "video": true,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      99,
+      878
+    ],
+    "id": 100287,
+    "original_language": "da",
+    "original_title": "Min Avatar og mig",
+    "overview": "is a creative documentary-fiction film and a film that might expand your sense of reality. It is the story about a man who enters the virtual world Second Life to pursue his personal dreams and ambitions. His journey into cyberspace becomes a magic learning experience, which gradually opens the gates to a much larger reality.",
+    "release_date": "2010-11-17",
+    "poster_path": "/1DRS1iHoIKQ3ZKVmuFeIsjRd6Gr.jpg",
+    "popularity": 1.001001,
+    "title": "My Avatar and Me",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [],
+    "id": 287004,
+    "original_language": "en",
+    "original_title": "Avatar: Production Materials",
+    "overview": "Production material overview of what was used in Avatar",
+    "release_date": "2009-12-18",
+    "poster_path": "/wQ6qSfC8IoiS71swcleUrpDMjt3.jpg",
+    "popularity": 1.002226,
+    "title": "Avatar: Production Materials",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [],
+    "id": 287003,
+    "original_language": "en",
+    "original_title": "Avatar: Scene Deconstruction",
+    "overview": "The deconstruction of the Avatar scenes and sets",
+    "release_date": "2009-12-18",
+    "poster_path": "/wQ6qSfC8IoiS71swcleUrpDMjt3.jpg",
+    "popularity": 1.000951,
+    "title": "Avatar: Scene Deconstruction",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      18
+    ],
+    "id": 215070,
+    "original_language": "en",
+    "original_title": "Eternity",
+    "overview": "TV producer James has an extremely vivid dream, in which he is a prince struggling to keep the kingdom at peace against the wishes of his warfaring brother, while at the same time competing with his brother for a woman's love. The figures in his dream match those in his real life, with his brother being an aggressive business man trying to buy James out, the king being James' advisor, and the woman being an actress recently cast for a commercial at his studio. Seeing his dreams as a message about his life, James decides to act on their guidance, even though they lead him into the fight of his life.",
+    "release_date": "1990-11-15",
+    "poster_path": "/mWeZUtpwVjpla5BHcbNbYrLh5FC.jpg",
+    "popularity": 1.000057,
+    "title": "Eternity",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/iLxpC23W8FzOcQQd4uUW8KnBM5R.jpg",
+    "genre_ids": [],
+    "id": 155444,
+    "original_language": "pl",
+    "original_title": "Awatar czyli zamiana dusz",
+    "overview": "Count Olgierd Łabiński lives with his beloved wife in Paris in a beautiful palace. The Countess recalls her stay in Florence and her insistent admirer Octavius ​​de Saville. Soon, Octavius, arrives in Paris and calls for the famous Dr. Cherbonneau, suspected of being a charlatan.  Citing the teachings of the East, Cherbonneau offers the patient an \"avatar\", a reincarnation of the soul, which takes a different body...",
+    "release_date": "1964-01-01",
+    "poster_path": "/ouzDYbXBVDDBsZ1iNWRRaTGF3Ay.jpg",
+    "popularity": 1.000168,
+    "title": "Avatar: The Exchange of Souls",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "backdrop_path": "/lKzCk4a1M25jZYrhgk54l98PEhY.jpg",
+    "first_air_date": "2012-04-14",
+    "genre_ids": [
+      16,
+      18,
+      10751
+    ],
+    "id": 33880,
+    "original_language": "en",
+    "original_name": "The Legend of Korra",
+    "overview": "The Legend of Korra is an American animated television series that premiered on the Nickelodeon television network in 2012. It was created by Bryan Konietzko and Michael Dante DiMartino as a sequel to their series Avatar: The Last Airbender, which aired on Nickelodeon from 2005 to 2008. Several people involved with creating Avatar, including designer Joaquim Dos Santos and composers Jeremy Zuckerman and Benjamin Wynn, returned to work on The Legend of Korra.\n\nThe series is set in a fictional universe where some people can manipulate, or \"bend\", the elements of water, earth, fire, or air. Only one person, the \"Avatar\", can bend all four elements, and is responsible for maintaining balance in the world. The series follows Avatar Korra, the successor of Aang from the previous series, as she faces political and spiritual unrest in a modernizing world.\n\nThe series, whose style is strongly influenced by Japanese animation, has been a critical and commercial success. It obtained the highest audience total for an animated series in the United States in 2012. The series was praised by reviewers for its high production values and for addressing difficult sociopolitical issues such as social unrest and terrorism. It was initially conceived as a miniseries of 12 episodes, but it is now set to run for 52 episodes separated into four seasons, each of which tells a separate story.",
+    "origin_country": [
+      "US"
+    ],
+    "poster_path": "/vTK1fEM9hn02uP1BjgGHbhaiBHv.jpg",
+    "popularity": 2.19871,
+    "name": "The Legend of Korra",
+    "vote_average": 7.4,
+    "vote_count": 23,
+    "media_type": "tv"
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/A63oimz70bY716xIWEhSQHxcB5c.jpg",
+    "genre_ids": [
+      99
+    ],
+    "id": 111332,
+    "original_language": "en",
+    "original_title": "Avatar: Creating the World of Pandora",
+    "overview": "The Making-of James Cameron's Avatar. It shows interesting parts of the work on the set.",
+    "release_date": "2010-02-07",
+    "poster_path": "/9sjVt3bvKgwFCdyBoxwdFurqc3V.jpg",
+    "popularity": 1.185089,
+    "title": "Avatar: Creating the World of Pandora",
+    "video": false,
+    "vote_average": 5,
+    "vote_count": 3,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      99
+    ],
+    "id": 377191,
+    "original_language": "en",
+    "original_title": "AVATARA",
+    "overview": "AVATARA is not a cartoon. It's a documentary about an Internet subculture who spend their lives immersed in an online 3-D voice-chat program called \"Digitalspace Traveler.\" Through a series of 14 interviews, we uncover the history, art, identities, struggles and emotions of this unique internet community who, since as far back as 1996 have mostly devoted their lives to this software.",
+    "release_date": "2003-05-01",
+    "poster_path": "/lb26E5bPc6Ap4ks3npwVrsWESxz.jpg",
+    "popularity": 1.000755,
+    "title": "AVATARA",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": null,
+    "genre_ids": [
+      99
+    ],
+    "id": 278516,
+    "original_language": "en",
+    "original_title": "Avatars Offline",
+    "overview": "Around the world hundreds of thousands of people, most of them over the age of 20, spend a significant portion of their life in front of the screen.  Socializing.  Making friends.  Chasing dragons.  Getting armor. Meeting soulmates.  they are willing to lose friends, family, and spouses to live a life \"more real\" than their own.",
+    "release_date": "2002-06-15",
+    "poster_path": "/oHwoF8ipjvgQq0YJsmrb4i72m4u.jpg",
+    "popularity": 1.000737,
+    "title": "Avatars Offline",
+    "video": false,
+    "vote_average": 0,
+    "vote_count": 0,
+    "media_type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/qUv1jYnxufm8aKg4OVDcwrkJmg6.jpg",
+    "genre_ids": [
+      878,
+      27,
+      53
+    ],
+    "id": 79582,
+    "original_language": "en",
+    "original_title": "Aliens vs. Avatars",
+    "overview": "Six college friends blowing off steam on a camping trip, find themselves caught up in a cat and mouse hunt with an Alien monster. Not knowing what to do or who to trust, they struggle to protect themselves. Reluctantly, they join forces with another, seemingly friendly, alien, Ava, who orbits the Earth and appears to them in the form of an avatar. Having only one chance at stopping the monster, they must race to locate and repair the Ava’s earth sent robot, before it slaughters them one by one.",
+    "release_date": "2011-09-20",
+    "poster_path": "/9ntgW9dwg5imLfbcQDoAO3Z9L4X.jpg",
+    "popularity": 1.019174,
+    "title": "Aliens vs. Avatars",
+    "video": false,
+    "vote_average": 1.4,
+    "vote_count": 4,
+    "media_type": "movie"
+  }
+]
