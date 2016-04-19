@@ -1,0 +1,213 @@
+[
+  {
+    "adult": false,
+    "id": 4491,
+    "known_for": [
+      {
+        "adult": false,
+        "backdrop_path": "/zq1jEtJCszbQPFMt65QEsjIRTft.jpg",
+        "genre_ids": [
+          35,
+          80
+        ],
+        "id": 138832,
+        "original_language": "en",
+        "original_title": "We're the Millers",
+        "overview": "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+        "release_date": "2013-08-07",
+        "poster_path": "/digXuLXmk88Ar23LYUQTLcz5npA.jpg",
+        "popularity": 2.637109,
+        "title": "We're the Millers",
+        "video": false,
+        "vote_average": 6.9,
+        "vote_count": 1579,
+        "media_type": "movie"
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/wH8vtnsmU4olFJ5wSRHo8RXRhKF.jpg",
+        "genre_ids": [
+          14,
+          35
+        ],
+        "id": 310,
+        "original_language": "en",
+        "original_title": "Bruce Almighty",
+        "overview": "Bruce Nolan toils as a \"human interest\" television reporter in Buffalo, N.Y. Despite his high ratings and the love of his beautiful girlfriend, Grace, Bruce remains unfulfilled. At the end of the worst day in his life, he angrily ridicules God -- and the Almighty responds, endowing Bruce with all of His divine powers.",
+        "release_date": "2003-05-23",
+        "poster_path": "/y5TEe8Qbgn91dwqVm9FqE2PEL4Q.jpg",
+        "popularity": 4.194663,
+        "title": "Bruce Almighty",
+        "video": false,
+        "vote_average": 6.3,
+        "vote_count": 1359,
+        "media_type": "movie"
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1iVZJmeHW8MVMq7xlaHgLSv6qrc.jpg",
+        "genre_ids": [
+          35,
+          80
+        ],
+        "id": 51540,
+        "original_language": "en",
+        "original_title": "Horrible Bosses",
+        "overview": "For Nick (Jason Bateman), Kurt (Jason Sudeikis) and Dale (Charlie Day), the only thing that would make the daily grind more tolerable would be to grind their intolerable bosses (Kevin Spacey, Colin Farrell, Jennifer Aniston) into dust. Quitting is not an option, so, with the benefit of a few-too-many drinks and some dubious advice from a hustling ex-con (Jamie Foxx), the three friends devise a convoluted and seemingly foolproof plan to rid themselves of their respective employers... permanently.",
+        "release_date": "2011-07-08",
+        "poster_path": "/17rVRW7ond0PR2KJHY0xY00isTB.jpg",
+        "popularity": 3.397848,
+        "title": "Horrible Bosses",
+        "video": false,
+        "vote_average": 6.4,
+        "vote_count": 1128,
+        "media_type": "movie"
+      }
+    ],
+    "name": "Jennifer Aniston",
+    "popularity": 10.830772,
+    "profile_path": "/4d4wvNyDuvN86DoneawbLOpr8gH.jpg",
+    "media_type": "person"
+  },
+  {
+    "adult": false,
+    "id": 115002,
+    "known_for": [
+      {
+        "backdrop_path": "/p3xW5lIAa00mWjzw3j7WTIQviZn.jpg",
+        "first_air_date": "1995-01-16",
+        "genre_ids": [
+          18,
+          878,
+          10759
+        ],
+        "id": 1855,
+        "original_language": "en",
+        "original_name": "Star Trek: Voyager",
+        "overview": "Pulled to the far side of the galaxy, where the Federation is 75 years away at maximum warp speed, a Starfleet ship must cooperate with Maquis rebels to find a way home.",
+        "origin_country": [
+          "US"
+        ],
+        "poster_path": "/tqUH9uyIKuW7gMTCWh56w1Z5hRY.jpg",
+        "popularity": 3.95533,
+        "name": "Star Trek: Voyager",
+        "vote_average": 7.5,
+        "vote_count": 43,
+        "media_type": "tv"
+      },
+      {
+        "backdrop_path": "/vdtJIEyBEfV2gvmMbvndxacWmTi.jpg",
+        "first_air_date": "2000-10-05",
+        "genre_ids": [
+          35,
+          18
+        ],
+        "id": 4586,
+        "original_language": "en",
+        "original_name": "Gilmore Girls",
+        "overview": "Gilmore Girls is an American comedy-drama series created by Amy Sherman-Palladino, starring Lauren Graham and Alexis Bledel. On October 5, 2000, the series debuted on The WB to widespread critical acclaim and remained a tent-pole to the WB until it was cancelled in its seventh season, ending on May 15, 2007 on The CW. The entire series has been released on DVD, as well as on iTunes.\n\nThe show follows single mother Lorelai Gilmore and her daughter, also named Lorelai but who prefers to be called Rory, living in the fictional town of Stars Hollow, Connecticut, a town filled with colorful characters, located approximately 30 minutes from Hartford, Connecticut. Ambition, education, and work constitute part of the series' central concerns, telling Lorelai's story from pregnant teen runaway and high school dropout to co-owner and manager of the Dragonfly Inn. Rory's transition from public school to the prestigious Chilton is similarly followed, exploring her ambition to study at an Ivy League college and to become a foreign correspondent. The show's social commentary manifests most clearly in Lorelai's difficult relationship with her wealthy, appearances-obsessed parents, Emily and Richard Gilmore, and in the interactions between the students at Chilton, and later, Yale University.",
+        "origin_country": [
+          "US"
+        ],
+        "poster_path": "/mQs0u3PZoP13Qn9qzjPTECW5u1Y.jpg",
+        "popularity": 3.295401,
+        "name": "Gilmore Girls",
+        "vote_average": 6,
+        "vote_count": 24,
+        "media_type": "tv"
+      },
+      {
+        "backdrop_path": "/hY0TRC5cXMqFQvm5xl5LLd9t7eX.jpg",
+        "first_air_date": "1999-09-22",
+        "genre_ids": [
+          18
+        ],
+        "id": 688,
+        "original_language": "en",
+        "original_name": "The West Wing",
+        "overview": "The West Wing is an American television serial drama created by Aaron Sorkin that was originally broadcast on NBC from September 22, 1999, to May 14, 2006. The series is set primarily in the West Wing of the White House, where the Oval Office and offices of presidential senior staff are located, during the fictional Democratic administration of Josiah Bartlet.",
+        "origin_country": [
+          "US"
+        ],
+        "poster_path": "/kHhCxCEwOXd36mUtNCir0lDVQld.jpg",
+        "popularity": 6.733135,
+        "name": "The West Wing",
+        "vote_average": 7.5,
+        "vote_count": 19,
+        "media_type": "tv"
+      }
+    ],
+    "name": "John Aniston",
+    "popularity": 1.000775,
+    "profile_path": "/bdoZowDiTQu7tpWokDuKBlEVQ6u.jpg",
+    "media_type": "person"
+  },
+  {
+    "adult": false,
+    "id": 1222356,
+    "known_for": [
+      {
+        "backdrop_path": "/56VOv1TiOwGiGbp1B3QLGFQlQZb.jpg",
+        "first_air_date": "1962-09-26",
+        "genre_ids": [
+          35
+        ],
+        "id": 1930,
+        "original_language": "en",
+        "original_name": "The Beverly Hillbillies",
+        "overview": "The Beverly Hillbillies is an American situation comedy originally broadcast for nine seasons on CBS from 1962 to 1971, starring Buddy Ebsen, Irene Ryan, Donna Douglas, and Max Baer, Jr.\n\nThe series is about a poor backwoods family transplanted to Beverly Hills, California, after striking oil on their land. A Filmways production created by writer Paul Henning, it is the first in a genre of \"fish out of water\" themed television shows, and was followed by other Henning-inspired country-cousin series on CBS. In 1963, Henning introduced Petticoat Junction, and in 1965 he reversed the rags to riches model for Green Acres. The show paved the way for later culture-conflict programs such as The Jeffersons, McCloud, The Nanny, The Fresh Prince of Bel-Air, and Doc. Panned by many entertainment critics of its time, it quickly became a huge ratings success for most of its nine-year run on CBS.\n\nThe Beverly Hillbillies ranked among the top twenty most watched programs on television for eight of its nine seasons, twice ranking as the number one series of the year, with a number of episodes that remain among the most watched television episodes of all time.\n\nThe ongoing popularity of the series spawned a 1993 film remake by 20th Century Fox.",
+        "origin_country": [
+          "US"
+        ],
+        "poster_path": "/gltbIE1UMsxtyZ1obK06H0i6TFf.jpg",
+        "popularity": 3.234276,
+        "name": "The Beverly Hillbillies",
+        "vote_average": 6.4,
+        "vote_count": 8,
+        "media_type": "tv"
+      },
+      {
+        "backdrop_path": null,
+        "first_air_date": null,
+        "genre_ids": [],
+        "id": 1174,
+        "original_language": "en",
+        "original_name": "Hard Copy",
+        "overview": "Hard Copy is an American tabloid news television show that ran in syndication from 1989 to 1999. Hard Copy was aggressive in its use of questionable material on television, including gratuitous violence.\n\nThe original hosts of Hard Copy were Alan Frio and Terry Murphy; Barry Nolan joined the series in 1990 and stayed until 1998. In the show's final season, current KFMB sports director Kyle Kraska took over as host.",
+        "origin_country": [
+          "US"
+        ],
+        "poster_path": null,
+        "popularity": 1,
+        "name": "Hard Copy",
+        "vote_average": 0,
+        "vote_count": 0,
+        "media_type": "tv"
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+          27,
+          53
+        ],
+        "id": 244305,
+        "original_language": "en",
+        "original_title": "The Ice House",
+        "overview": "A serial killer who works in an ice house murders women, then brings their bodies back to the ice house and stores them there. He also murders his brother, who is a cop, and takes his place in the investigation.",
+        "release_date": "1969-01-01",
+        "poster_path": null,
+        "popularity": 1.001884,
+        "title": "The Ice House",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "media_type": "movie"
+      }
+    ],
+    "name": "Nancy Dow",
+    "popularity": 1,
+    "profile_path": null,
+    "media_type": "person"
+  }
+]

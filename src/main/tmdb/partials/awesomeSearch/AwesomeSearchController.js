@@ -22,32 +22,25 @@ define( [ 'angular',
         "use strict";
 
         var AwesomeSearchController = function($scope, TMDBAPIService, $timeout ) {
+            //Reference variables
             var self = this;
-
             var apiSearch = TMDBAPIService.Search();
             var apiPerson = TMDBAPIService.Person();
-
             var searchPromise;
+            self.timeWatcher = 500;
 
             $scope.searchPhrase = "";
 
             $scope.$watch('searchPhrase',function(newValue,oldValue){
-                
+                console.log("newValue="+newValue+",oldValue="+oldValue);
+            
                 $timeout.cancel(searchPromise);
 
                 searchPromise = $timeout(function(){
                     searchPromise = undefined;
-                    console.log("newValue="+newValue+",oldValue="+oldValue);
-                    if (newValue) {
-                        if (newValue.length >= 3) {
-                            console.log("Aguanta buscar!");
-                            self.search();
-                        }
-                    }
-                },500);
+                    self.search();
+                },self.timeWatcher);
             });
-
-
 
             $scope.performSearch = function(event) {
                 if (event.which === 13) {
@@ -59,23 +52,28 @@ define( [ 'angular',
             * Call the API with the search phrase
             */
             self.search = function(){
-                apiSearch.search.multi($scope.searchPhrase).then(function(response){
-                    $scope.searchResults = response.data.results;
+                if ($scope.searchPhrase) {
+                    if ($scope.searchPhrase.length >= 3) {
+       
+                        apiSearch.search.multi($scope.searchPhrase).then(function(response){
 
-                    $scope.searchResults.forEach(function(item){
-                        if (item.media_type === "person") {
-                            // Get images for persons 
-                            apiPerson.person.person(item.id).then( function(r) {
-                                item.foto = r.data.profile_path;
-                                console.log(r.data.profile_path);
+                            $scope.searchResults = response.data.results;
+
+                            $scope.searchResults.forEach(function(item){
+                                if (item.media_type === "person") {
+                                    // Get images for persons 
+                                    apiPerson.person.person(item.id).then( function(r) {
+                                        item.foto = r.data.profile_path;
+                                    });
+                                }
+                                else {
+                                    item.foto = item.poster_path;
+                                }
                             });
-                        }
-                        else {
-                            item.foto = item.poster_path;
-                        }
-                    });
 
-                });
+                        });
+                    }
+                }
             };
 
         };
