@@ -23,12 +23,6 @@ define( [ 'angular',
 
         var AwesomeSearchResultsController = function($scope, TMDBAPIService ) {
 
-
-            var config  = angular.module("config");
-            $scope.view = {
-            	images: config.apiImg
-            };
-            
         };
 
         AwesomeSearchResultsController.$inject = [ '$scope', 'TMDBAPIService' ];

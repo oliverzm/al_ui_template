@@ -28,6 +28,10 @@ define( [ 'angular',
             var apiPerson = TMDBAPIService.Person();
             var searchPromise;
             self.timeWatcher = 500;
+            var limitName = 24;
+
+            var config  = angular.module("config");
+            var defaultImage = "http://simpleicon.com/wp-content/uploads/movie-1.png";
 
             $scope.searchPhrase = "";
 
@@ -49,6 +53,34 @@ define( [ 'angular',
             };
 
             /**
+            * Return the name depending on the results.
+            */
+            var formatName = function(data) {
+
+                var newName = data.name || data.title;
+
+                if (newName) {
+                    if(newName.length > limitName){ 
+                        return newName.substr(0, limitName)+"...";
+                    }
+                    return newName;
+                }
+
+                return "No name";
+            };
+
+            /**
+            * Return the default image if not have a defined
+            * image path.
+            */
+            self.getImagePath = function( path ) {
+                if(path){
+                    return config.apiImg + path;   
+                }
+                return defaultImage;  
+            };
+
+            /**
             * Call the API with the search phrase
             */
             self.search = function(){
@@ -63,12 +95,13 @@ define( [ 'angular',
                                 if (item.media_type === "person") {
                                     // Get images for persons 
                                     apiPerson.person.person(item.id).then( function(r) {
-                                        item.foto = r.data.profile_path;
+                                        item.foto = self.getImagePath(r.data.profile_path);
                                     });
                                 }
                                 else {
-                                    item.foto = item.poster_path;
+                                    item.foto = self.getImagePath(item.poster_path);
                                 }
+                                item.formatName = formatName(item);
                             });
 
                         });
