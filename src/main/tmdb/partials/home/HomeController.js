@@ -27,6 +27,9 @@ define( [ 'angular',
                 movies: [],
             };
 
+            var config  = angular.module("config");
+            $scope.view = {urlImg: config.apiImg};
+
             var api = TMDBAPIService.Discover();
             api.discover.movies().then(function ( response ) {
                 $scope.view.movies = response.data;

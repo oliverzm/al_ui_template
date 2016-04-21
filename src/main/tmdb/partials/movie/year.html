@@ -1,0 +1,7 @@
+<div>
+	<div class="btn-toolbar" role="toolbar" aria-label="Test Year">		
+		<div ng-repeat="year in yearMovieArray" class="btn-group" role="group" aria-label="{{year}}">
+		  	<button class="btn btn-default" ng-class="{'btn-success':year==yearMovie}" type="button">{{year}}</button>
+		</div>
+	</div>
+</div>

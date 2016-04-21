@@ -1,7 +1,7 @@
 /**
- * Provides a popular-movies element
+ * Provides a similar-movies element
  *
- * @module tmdb.directives.popularMovies
+ * @module tmdb.directives.similarMovies
  *
  * @requires angular
  * @requires RemoteImageLoader
@@ -16,19 +16,19 @@
  */
 
 define( [ 'angular',
-          'tmdb/partials/remoteImageLoader/RemoteImageLoader' ], 
-    function( angular, RemoteImageLoader ) {
+          'tmdb/partials/movie/YearController' ], 
+    function( angular, YearController ) {
         "use strict";
 
         return function() {
             return {
                 transclude: true,
                 replace: true,
-                //controller: RemoteImageLoader,
-                templateUrl: '/tmdb/partials/popularMovies/popularMovies.html',
+                controller: YearController,
+                templateUrl: '/tmdb/partials/movie/year.html',
                 restrict: 'E',
                 scope: {
-                    movieList: '=ngModel'
+                    yearMovie: '=ngModel'
                 }
             };
         };
