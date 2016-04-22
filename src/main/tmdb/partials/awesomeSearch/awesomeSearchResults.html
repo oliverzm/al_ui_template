@@ -2,11 +2,19 @@
 	<div class="container">
 		<div ng-repeat="result in resultList" 
 		class="col-xs-3">
+			<a href="#{{result.id}}" data-toggle="modal" data-target="#{{result.id}}" ng-click="setCurrentMovie(result.id)">
 			<img ng-src="{{result.foto}}" title="{{result.title}} as {{result.character}}" width="65" height="97" ng-if="result.foto" />
+			</a>
 			<span class="badge">{{result.media_type}}</span>
 			<span>
 			<a href="/#/movie/{{result.id}}" style="font-size:8pt">{{result.formatName}}</a>
 			</span>
+			
 		</div>
+
+		<!-- <movie-trailer ng-repeat="movie in resultList track by $index" ng-model="currentMovie"> </movie-trailer> -->
+
+		<movie-trailer ng-model="currentMovie"> </movie-trailer>
+
 	</div>
-</div>
+</div>	
