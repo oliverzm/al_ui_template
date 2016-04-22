@@ -19,14 +19,11 @@
                     Running Time {{ detail.details.runtime }} minutes
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="detail">
-                    Budget ${{ detail.details.budget | number }} USD
-                </div>
-                <div class="detail">
-                    Revenue ${{ detail.details.revenue | number }} USD
-                </div>
-            </div>
+
+            <money budget="detail.details.budget" revenue="detail.details.revenue"  />
+                
+              
+            
         </div>
         <div>
             <span ng-repeat="genre in detail.details.genres">
