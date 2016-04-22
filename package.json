@@ -17,7 +17,7 @@
     "postinstall": "parallelshell 'npm run hookmeup' 'npm run less' 'grunt install'",
     "release": "npm version patch",
     "release:build": "npm version patch && npm run build",
-    "start": "ws -p 8888 -d src/main/",
+    "start": "ws -p 8080 -d src/main/",
     "test": "npm run lint && npm run karma",
     "watch": "parallelshell 'npm run watch:html' 'npm run watch:less' 'npm run watch:js' 'npm run watch:test' 'npm start'",
     "watch:design": "parallelshell 'npm run watch:less' 'npm start'",
@@ -26,7 +26,7 @@
     "watch:js": "onchange 'src/main/**/*.js' '!src/main/**/*.test.js' '!src/main/coverage/**' '!src/main/doc/**' -- npm run lint",
     "watch:less": "onchange 'src/main/**/*.less' -- npm run less",
     "watch:test": "onchange 'src/main/**/*.test.js' '!src/main/coverage/**' '!src/main/doc/**' -- npm run unit-tests all",
-    "livereload": "cd src/main ; ../../node_modules/instant-server/bin/instant 8888",
+    "livereload": "cd src/main ; ../../node_modules/instant-server/bin/instant 8080",
     "jenkins-protractor": "cd src/test/ ; ./protractor-jenkins.sh",
     "protractor": "cd src/test/ ; ./protractor-local.sh; "
   },

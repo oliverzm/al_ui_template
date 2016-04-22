@@ -31,7 +31,7 @@ define( [ 'angular',
             var limitName = 24;
 
             var config  = angular.module("config");
-            var defaultImage = "http://simpleicon.com/wp-content/uploads/movie-1.png";
+            var defaultImage = "https://simpleicon.com/wp-content/uploads/movie-1.png";
 
             $scope.searchPhrase = "";
 
