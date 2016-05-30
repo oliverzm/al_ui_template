@@ -1,0 +1,33 @@
+<div class="television-information-details">
+    <div class="col-md-4">
+        <img class="television-information-moviephoto" src="{{view.images}}{{ detail.details.poster_path }}" />
+    </div>
+    <div class="col-md-7">
+        <h1>{{ detail.details.original_name }}</h1>
+        <television-rating ng-model="detail"></television-rating>
+        <span class="television-information-overview" ng-if="detail.details.overview">
+            {{ detail.details.overview }}
+        </span>
+        <br />
+        <div class="col-md-12">
+            <span class="fa fa-tags genre-tag" ng-repeat="genre in detail.details.genres">
+                {{ genre.name }}
+            </span>
+            <br />
+            <span ng-if="detail.details.homepage">
+                <a href="{{ detail.details.homepage }}" target=_new>{{ detail.details.homepage }}</a>
+            </span>
+            <div class="television-information-createdby">
+                <div class="television-information-createdby-tittle">
+                    Created By:
+                </div>
+                <a ng-repeat="created in detail.details.created_by" href="/#/person/{{created.id}}">
+                    <span>
+                        {{ created.name }}
+                    </span>
+                    <br>
+                </a> 
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div>
+    <div class="row movie-calification" ng-if="view.rating.cantQualify">   
+            <span ng-class="{selected:view.rating.value>=1}" class="fa fa-star starRating" ng-click="view.rating.value = 1"></span>
+            <span ng-class="{selected:view.rating.value>=2}" class="fa fa-star starRating" ng-click="view.rating.value = 2"></span>
+            <span ng-class="{selected:view.rating.value>=3}" class="fa fa-star starRating" ng-click="view.rating.value = 3"></span>
+            <span ng-class="{selected:view.rating.value>=4}" class="fa fa-star starRating" ng-click="view.rating.value = 4"></span>
+            <span ng-class="{selected:view.rating.value>=5}" class="fa fa-star starRating" ng-click="view.rating.value = 5"></span>
+            <span ng-class="{selected:view.rating.value>=6}" class="fa fa-star starRating" ng-click="view.rating.value = 6"></span>
+            <span ng-class="{selected:view.rating.value>=7}" class="fa fa-star starRating" ng-click="view.rating.value = 7"></span>
+            <span ng-class="{selected:view.rating.value>=8}" class="fa fa-star starRating" ng-click="view.rating.value = 8"></span>
+            <span ng-class="{selected:view.rating.value>=9}" class="fa fa-star starRating" ng-click="view.rating.value = 9"></span>
+            <span ng-class="{selected:view.rating.value>=10}" class="fa fa-star starRating" ng-click="view.rating.value = 10"></span>
+            <button ng-click="saveRating()">Qualify Movie</button>
+    </div>
+    <div class="row movie-calification" >       
+        {{detail.details.vote_average}}/10 ({{detail.details.vote_count}} votes
+        <span ng-if="view.details.movieAccountStates.rated">, you voted {{view.details.movieAccountStates.rated.value}}</span>)
+    </div>
+</div>

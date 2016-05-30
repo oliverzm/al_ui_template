@@ -1,0 +1,15 @@
+<div class="television-seasons">
+	<div class="television-seasons-tittle">
+		Seasons ({{detail.details.number_of_seasons}})
+	</div>
+	<div class="col-xs-3 television-seasons-season" ng-repeat="season in detail.details.seasons">
+		<span class="season-tittle">
+			<a href="/#/tv/{{detail.details.id}}/season/{{season.season_number}}">
+				Season {{season.season_number}} ({{season.episode_count}} Episodes)				
+			</a>
+			<br>
+			{{season.air_date}}
+		</span>
+		<img class="season-posterpath" ng-src="{{view.images}}{{season.poster_path}}" ng-if="season.poster_path" />		
+	</div>
+</div>

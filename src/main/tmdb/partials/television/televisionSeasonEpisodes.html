@@ -1,0 +1,36 @@
+<app-header></app-header>
+<awesome-search></awesome-search>
+<div class="episode-information">
+    <div class="episode-information-container container">    
+        <div class="row">
+            <div class="episode-information-details">
+			    <div class="col-md-4">
+			        <img class="episode-information-moviephoto" src="{{view.images}}{{ view.details.still_path }}" />
+			    </div>
+			    <div class="col-md-7">
+			        <h1>
+			        	<a href="/#/tv/{{view.tv_id}}/season/{{view.details.season_number}}">Season {{view.details.season_number}}</a>, 
+			        	Episode {{view.details.episode_number}}: 
+			        	<br>
+			        	{{ view.details.name }}
+			        </h1>
+			        Air Date: {{view.details.air_date}}
+			        <br>
+			        <span class="episode-information-overview" ng-if="view.details.overview">
+			            {{ view.details.overview }}
+			        </span>
+			    </div>
+			</div>
+        </div>
+        <div class="row">
+        	<div class="episode-information-images">
+        		<div class="episode-information-images-title">
+        			Images
+        		</div>
+        		<div class="col-xs-3 episode-information-images-image" ng-repeat="image in view.details.images.stills">
+					<img class="episode-filepath" ng-src="{{view.images}}{{image.file_path}}" ng-if="image.file_path" />		
+				</div>
+        	</div>
+        </div>
+    </div>
+</div>

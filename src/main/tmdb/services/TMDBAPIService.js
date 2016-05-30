@@ -10,6 +10,7 @@
  * @requires config/config
  *
  * @author Barry Skidmore <bskidmore@alertlogic.com>
+ * @author Oliver Zuluaga <oliverjzm@gmail.com>
  *
  * @returns Wrapper for several TMDB API's
  *
@@ -23,9 +24,122 @@ define( [ 'angular',
     function ( angular ) {
         "use strict";
 
-        var TMDBAPIService = function ( $rootScope, $http, $timeout, $resource, localStorageService, $location ) {
+        var TMDBAPIService = function ( $rootScope, $http, $timeout, $resource, $q, localStorageService, $location ) {
+
+            var self            = this;
+            var config          = angular.module("config");
+            var serviceVersion  = 3;
+            var apiBaseUrl      = config.apiUrl + serviceVersion;
+            var apiKey          = config.apiKey;
+            this.ServiceCache = [];
+
+            this.getConfiguration = function() {
+                var req = {
+                    method: "GET",
+                    url: apiBaseUrl + "/configuration",
+                    params: {
+                        api_key: apiKey
+                    }
+                };
+
+                return $http( req );
+            };
+            /********************************************/
 
             this.ServiceCache = [];
+
+            this.getAuthenticationToken = function() {
+                var req = {
+                    method: 'GET',
+                    url: apiBaseUrl + "/authentication/token/new",
+                    params: {
+                        api_key: apiKey
+                    }
+                };
+
+                return $http( req );
+            };
+
+            this.authorizeAuthToken = function( token, username, password ) {
+                var req = {
+                    method: 'GET',
+                    url: apiBaseUrl + "/authentication/token/validate_with_login",
+                    params: {
+                        api_key: apiKey,
+                        request_token: token,
+                        username: username,
+                        password: password
+                    }
+                };
+
+                return $http( req );
+            };
+
+            this.createSession = function( requestToken ) {
+                var req = {
+                    method: 'GET',
+                    url: apiBaseUrl + "/authentication/session/new",
+                    params: {
+                        api_key: apiKey,
+                        request_token: requestToken
+                    }
+                };
+
+                return $http( req );
+            };
+
+            this.getAccountDetails = function( sessionID ) {
+                var req = {
+                    method: 'GET',
+                    url: apiBaseUrl + "/account",
+                    params: {
+                        api_key: apiKey,
+                        session_id: sessionID
+                    }
+                };
+                return $http( req );
+            };
+
+            this.authenticate = function( username, password ) {
+                return self.getAuthenticationToken().then( function( tokenResponse ) {
+                    if ( ! tokenResponse.data.success || ! tokenResponse.data.request_token ) {
+                        return $q.reject( "Failed to get a token from /authentication/token/new" );
+                    }
+
+                    var requestToken = tokenResponse.data.request_token;
+
+                    return self.authorizeAuthToken( requestToken, username, password ).then( function( authResponse ) {
+                        if ( ! authResponse.data.success ) {
+                            return $q.reject("Failed to authorize a token with /authentication/token/validate_with_login endpoint" );
+                        }
+
+                        return self.createSession( requestToken ).then( function( sessionResponse ) {
+                            if ( ! sessionResponse.data.success || ! sessionResponse.data.session_id ) {
+                                return $q.reject( "Failed to create a session with the authentication/session/new endpoint" );
+                            }
+
+                            var sessionID = sessionResponse.data.session_id;
+
+                            return self.getAccountDetails( sessionID ).then( function( accountResponse ) {
+                                console.log( "Account information: ", accountResponse );
+
+                                var authenticationResult = {
+                                    sessionID: sessionID,
+                                    userID: accountResponse.data.id,
+                                    fullName: accountResponse.data.name,
+                                    userName: accountResponse.data.username,
+                                    profileImageURL: "http://www.gravatar.com/avatar/" + accountResponse.data.avatar.gravatar.hash
+                                };
+
+                                console.log("Resolving promise with", authenticationResult );
+                                return authenticationResult;
+                            } );
+
+                        } );
+                    } );
+
+                } );
+            };
 
             /* http://docs.themoviedb.apiary.io/reference/discover */
             /*
@@ -84,9 +198,46 @@ define( [ 'angular',
                         return $http.get( uri );
                     };
 
+                    /* http://docs.themoviedb.apiary.io/reference/movies/movieid/rating */
+                    var getMovieRating = function ( movie, session_id, valueRating ) {
+                        var uri = serviceBase.url + '/movie/' + movie + '/rating';
+
+                        var req = {
+                            method: 'POST',
+                            url: uri,
+                            params: {
+                                api_key: serviceBase.apiKey,
+                                session_id: session_id
+                            },
+                            data: {
+                                value: valueRating 
+                            }
+                        };
+
+                        return $http( req );
+                    };
+
+                    /* http://docs.themoviedb.apiary.io/reference/movies/movieid/account_states */
+                    var getMovieAccountStates = function ( movie, session_id ) {
+                        var uri = serviceBase.url + '/movie/' + movie + '/account_states';
+
+                        var req = {
+                            method: 'GET',
+                            url: uri,
+                            params: {
+                                api_key: serviceBase.apiKey,
+                                session_id: session_id
+                            }
+                        };
+
+                        return $http( req );
+                    };
+
                     return {
                         movie: {
-                            movie: getMovie
+                            movie: getMovie,
+                            movieRating: getMovieRating,
+                            movieAccountStates: getMovieAccountStates,
                         }
                     };
                 });
@@ -112,6 +263,115 @@ define( [ 'angular',
                 });
             };
 
+            /* http://docs.themoviedb.apiary.io/reference/tv */
+            this.Television = function () {
+                return this.GetCachedService( "tv", function () {
+                    var serviceVersion = "3";
+                    var serviceBase    = this._normalizeEndpoint( serviceVersion, "tv" );
+
+                    /* http://docs.themoviedb.apiary.io/reference/tv/tvid */
+                    var getTv = function ( tv ) {
+                        var uri = serviceBase.url + '/tv/' + tv + '?api_key=' + serviceBase.apiKey + '&append_to_response=movie_credits,tv_credits,images';
+                        return $http.get( uri );
+                    };
+
+                    /* http://docs.themoviedb.apiary.io/reference/tv/tvidrating */
+                    var getTvRating = function ( tv, session_id, valueRating ) {
+                        var uri = serviceBase.url + '/tv/' + tv + '/rating';
+
+                        var req = {
+                            method: 'POST',
+                            url: uri,
+                            params: {
+                                api_key: serviceBase.apiKey,
+                                session_id: session_id
+                            },
+                            data: {
+                                value: valueRating 
+                            }
+                        };
+
+                        return $http( req );
+                    };
+
+                    /* http://docs.themoviedb.apiary.io/reference/tv/tvidaccountstates */
+                    var getTvAccountStates = function ( tv, session_id ) {
+                        var uri = serviceBase.url + '/tv/' + tv + '/account_states';
+
+                        var req = {
+                            method: 'GET',
+                            url: uri,
+                            params: {
+                                api_key: serviceBase.apiKey,
+                                session_id: session_id
+                            }
+                        };
+
+                        return $http( req );
+                    };
+
+                    /* http://docs.themoviedb.apiary.io/reference/tv-seasons/tvidseasonseasonnumber */
+                    var getTvSeason = function ( tv, season ) {
+                        var uri = serviceBase.url + '/tv/' + tv + '/season/' + season + '?api_key=' + serviceBase.apiKey + '&append_to_response=movie_credits,tv_credits,images';
+                        return $http.get( uri );
+                    };
+
+                    /* http://docs.themoviedb.apiary.io/#reference/tv-episodes/tvidseasonseasonnumberepisodeepisodenumber */
+                    var getTvSeasonEpisode = function ( tv, season, episode ) {
+                        var uri = serviceBase.url + '/tv/' + tv + '/season/' + season + '/episode/' + episode + '?api_key=' + serviceBase.apiKey + '&append_to_response=movie_credits,tv_credits,images';
+                        return $http.get( uri );
+                    };
+
+                    /* http://docs.themoviedb.apiary.io/reference/tv-episodes/tvidseasonseasonnumberepisodeepisodenumberrating */
+                    var getTvEpisodeRating = function ( tv, season, episode, session_id, valueRating ) {
+                        var uri = serviceBase.url + '/tv/' + tv + '/season/' + season + '/episode/' + episode + '/rating';
+
+                        var req = {
+                            method: 'POST',
+                            url: uri,
+                            params: {
+                                api_key: serviceBase.apiKey,
+                                session_id: session_id
+                            },
+                            data: {
+                                value: valueRating 
+                            }
+                        };
+
+                        return $http( req );
+                    };
+
+                    /* http://docs.themoviedb.apiary.io/reference/tv-episodes/tvidseasonseasonnumberepisodeepisodenumberaccountstates */
+                    var getTvEpisodeAccountStates = function ( tv, season, episode, session_id ) {
+                        var uri = serviceBase.url + '/tv/' + tv + '/season/' + season + '/episode/' + episode +  '/account_states';
+
+                        var req = {
+                            method: 'GET',
+                            url: uri,
+                            params: {
+                                api_key: serviceBase.apiKey,
+                                session_id: session_id
+                            }
+                        };
+
+                        return $http( req );
+                    };
+
+                    
+
+                    return {
+                        tv: {
+                            tv: getTv,
+                            tvRating: getTvRating,
+                            tvAccountStates: getTvAccountStates,
+                            season: getTvSeason,
+                            episode: getTvSeasonEpisode,
+                            episodeRating: getTvEpisodeRating,
+                            episodeAccountStates: getTvEpisodeAccountStates,                            
+                        }
+                    };
+                });
+            };
             /* http://docs.themoviedb.apiary.io/reference/search */
             this.Search = function() {
                 return this.GetCachedService( "search", function () {
@@ -200,7 +460,7 @@ define( [ 'angular',
             };
         };
 
-        TMDBAPIService.$inject = [ '$rootScope', '$http', '$timeout', '$resource', 'localStorageService', '$location' ];
+        TMDBAPIService.$inject = [ '$rootScope', '$http', '$timeout', '$resource', '$q', 'localStorageService', '$location' ];
 
         return TMDBAPIService;
 }

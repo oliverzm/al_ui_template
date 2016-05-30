@@ -1,13 +1,17 @@
-<div>
-    <div class="row">
-        <person-detail ng-model="view" />
-    </div>
-    <div class="row">
-        <div class="col-md-6" ng-if="view.details.movie_credits.cast.length > 0">
-            <person-cast ng-model="view.details.movie_credits.cast" />
+<app-header></app-header>
+<awesome-search></awesome-search>
+<div class="person-information">
+    <div class="person-information-container container">
+        <div class="row">
+            <person-detail ng-model="view" />
         </div>
-        <div class="col-md-6" ng-if="view.details.movie_credits.crew.length > 0">
-            <person-crew ng-model="view.details.movie_credits.crew" />
+        <div class="row">
+            <div class="col-md-6" ng-if="view.details.movie_credits.cast.length > 0">
+                <person-cast ng-model="view.details.movie_credits.cast" />
+            </div>
+            <div class="col-md-6" ng-if="view.details.movie_credits.crew.length > 0">
+                <person-crew ng-model="view.details.movie_credits.crew" />
+            </div>
         </div>
     </div>
 </div>

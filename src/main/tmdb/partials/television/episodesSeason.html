@@ -1,0 +1,22 @@
+<div class="season-episodes">
+	<div class="season-episodes-tittle">
+		List of Episodes
+	</div>
+	<div class="season-episodes-episode" ng-repeat="episode in detail.details.episodes">
+		<div class="col-md-3">
+			<img class="season-posterpath" ng-src="{{view.images}}{{episode.still_path}}" ng-if="episode.still_path" />	
+		</div>
+		<div class="col-md-7">
+			<div class="season-tittle">
+				<a href="/#/tv/{{detail.tv_id}}/season/{{detail.details.season_number}}/episode/{{episode.episode_number}}">
+						Episode {{episode.episode_number}}			
+				</a>
+				<br>
+				Air date: {{episode.air_date}}
+			</div>
+			<span >
+				{{episode.overview}}
+			</span>
+		</div>		
+	</div>
+</div>

@@ -22,7 +22,10 @@ define( [ 'angular',
         "use strict";
 
         var AwesomeSearchResultsController = function($scope, TMDBAPIService ) {
-
+        	$scope.currentMovie = 0;
+        	$scope.setCurrentMovie = function(id) {
+                 $scope.currentMovie = id;   
+          };
         };
 
         AwesomeSearchResultsController.$inject = [ '$scope', 'TMDBAPIService' ];

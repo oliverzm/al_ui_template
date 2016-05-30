@@ -1,10 +1,13 @@
 /**
- * Provides a search element
+ * Provides a awesome search element
  *
  * @module tmdb.directives.awesomeSearch
  *
  * @requires angular
- * @requires SearchController
+ * @requires AwesomeSearchController
+ *
+ * @param {object} angular - An instance of AngularJS
+ * @param {object} AwesomeSearchController - An instance of AwesomeSearchController 
  *
  * @author John Gomez <jgomez@alertlogic.com>
  *

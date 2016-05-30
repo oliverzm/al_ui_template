@@ -1,10 +1,7 @@
-<div class="awesome-search">
-	<div class="header">
-			Awesome Movie DB
-	</div>
+<div class="awesome-search" style="width: 70%; margin: 0 auto;">
 	<input type="text" ng-keypress="performSearch($event)" 
-	class="sticky-search" placeholder="Search Movie, Actor..." ng-model="searchPhrase" />
-	<div class="bodyarea">
+	class="sticky-search" placeholder="Search Movie, Actor or TV Shows..." ng-model="searchPhrase" />
+	<div>
 		<awesome-search-results ng-model="searchResults" />
 	</div> 
 </div>

@@ -16,19 +16,19 @@
  */
 
 define( [ 'angular',
-          'tmdb/partials/remoteImageLoader/RemoteImageLoader' ], 
-    function( angular, RemoteImageLoader ) {
+          'tmdb/partials/popularMovies/PopularMoviesController' ], 
+    function( angular, PopularMoviesController ) {
         "use strict";
 
         return function() {
             return {
                 transclude: true,
                 replace: true,
-                controller: RemoteImageLoader,
+                controller: PopularMoviesController,
                 templateUrl: '/tmdb/partials/popularMovies/popularMovies.html',
                 restrict: 'E',
                 scope: {
-                    movieList: '=ngModel'
+                    listResults: '=ngModel'
                 }
             };
         };

@@ -1,0 +1,15 @@
+<div class="season-information-details">
+    <div class="col-md-4">
+        <img class="season-information-moviephoto" src="{{view.images}}{{ detail.details.poster_path }}" />
+    </div>
+    <div class="col-md-7">
+        <a href="/#/tv/{{detail.tv_id}}"><span><< back to tv show</span></a>
+        <h1>{{ detail.details.name }}</h1>
+        Air Date: {{detail.details.air_date}}
+        <br>
+        Number of Episodes: {{detail.details.episodes.length}}
+        <span class="season-information-overview" ng-if="detail.details.overview">
+            {{ detail.details.overview }}
+        </span>
+    </div>
+</div>

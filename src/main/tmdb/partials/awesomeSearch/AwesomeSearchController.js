@@ -31,12 +31,12 @@ define( [ 'angular',
             var limitName = 24;
 
             var config  = angular.module("config");
-            var defaultImage = "http://simpleicon.com/wp-content/uploads/movie-1.png";
+            var defaultImage = "/no-image.jpg";
 
             $scope.searchPhrase = "";
 
             $scope.$watch('searchPhrase',function(newValue,oldValue){
-                console.log("newValue="+newValue+",oldValue="+oldValue);
+                //console.log("newValue="+newValue+",oldValue="+oldValue);
             
                 $timeout.cancel(searchPromise);
 
@@ -106,6 +106,14 @@ define( [ 'angular',
 
                         });
                     }
+                    else
+                    {
+                        $scope.searchResults = {};
+                    }
+                }
+                else
+                {
+                    $scope.searchResults = {};
                 }
             };
 

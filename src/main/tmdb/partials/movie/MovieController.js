@@ -23,7 +23,7 @@ define( [ 'angular',
     function( angular, $routeParams, config, TMDBAPIService ) {
         "use strict";
 
-        var MovieController = function($scope, TMDBAPIService, $routeParams ) {
+        var MovieController = function($rootScope, $scope, TMDBAPIService, $routeParams ) {
 
             $scope.view   = {
                 details: {},
@@ -32,11 +32,11 @@ define( [ 'angular',
             var api = TMDBAPIService.Movie();
             api.movie.movie($routeParams.id).then( function ( response ) {
                 $scope.view.details = response.data;
+                //console.log(response.data);
             });
-
         };
 
-        MovieController.$inject = [ '$scope', 'TMDBAPIService', '$routeParams' ];
+        MovieController.$inject = [ '$rootScope', '$scope', 'TMDBAPIService', '$routeParams' ];
 
         return MovieController;
     }
