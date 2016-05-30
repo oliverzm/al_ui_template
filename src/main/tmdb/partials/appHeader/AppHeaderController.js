@@ -45,7 +45,6 @@ define( [ 'angular',
             $scope.$on( "user.authenticated", function( $event, userSession ) {
                 $scope.view.authenticated = true;
                 $scope.view.session = userSession;
-                console.log("hi");
             } );
 
 

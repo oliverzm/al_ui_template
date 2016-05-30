@@ -121,7 +121,7 @@ define( [ 'angular',
                             var sessionID = sessionResponse.data.session_id;
 
                             return self.getAccountDetails( sessionID ).then( function( accountResponse ) {
-                                console.log( "Account information: ", accountResponse );
+                                //console.log( "Account information: ", accountResponse );
 
                                 var authenticationResult = {
                                     sessionID: sessionID,
@@ -131,7 +131,7 @@ define( [ 'angular',
                                     profileImageURL: "http://www.gravatar.com/avatar/" + accountResponse.data.avatar.gravatar.hash
                                 };
 
-                                console.log("Resolving promise with", authenticationResult );
+                                //console.log("Resolving promise with", authenticationResult );
                                 return authenticationResult;
                             } );
 
